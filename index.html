@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="logBookApp">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>PPC Log Book</title>
+		<meta name="description" content="PPC Log Book Application">
+		<meta name="author" content="OferR">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/lb-themse.css" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body>
+		<div ng-controller="flights">
+			<div>
+				<header>
+					<h1>PPC Log Book</h1>
+				</header>
+				<nav>
+					<p>
+						<a href="/">Home</a>
+					</p>
+					<p>
+						<a href="/contact">Contact</a>
+					</p>
+				</nav>
+
+				<div ng-repeat="x in users">
+					{{x.uUser}} , {{x.uID}}
+				</div>
+			</div>
+			<footer>
+				<p>
+					&copy; Copyright  by OferR
+				</p>
+			</footer>
+		</div>
+		<!-- Angular  -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+		<!-- Angular router -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+		<!-- App Scripts  -->
+		<script src="js/lb.js"></script>
+	</body>
+</html>
